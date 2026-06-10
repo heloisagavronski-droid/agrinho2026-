@@ -1,0 +1,544 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS & PALETA FAMÍLIA FOLHA (CURITIBA)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-green: #2e7d32;   /* Verde Folha Principal */
+    --light-green: #4caf50;     /* Verde Claro Dinâmico */
+    --gold: #fbc02d;            /* Dourado Energia/Sol */
+    --light-gold: #fff176;
+    --tech-blue: #0288d1;       /* Azul Tecnologia */
+    --dark-bg: #1b2e1e;         /* Fundo Escuro Orgânico (Floresta Escura) */
+    --soft-cream: #f4f7f4;      /* Fundo Claro Confortável */
+    --white: #ffffff;
+    --text-dark: #2c3e2e;
+    --text-light: #758a77;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave nativa */
+}
+
+body {
+    background-color: var(--soft-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Utilitários */
+.text-green { color: var(--primary-green); }
+.text-gold { color: var(--gold); }
+.hide { display: none; }
+
+/* ==========================================================================
+   CABEÇALHO & MENU
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-bg);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-green);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-green);
+}
+
+/* ==========================================================================
+   HERO BANNER (INÍCIO)
+   ========================================================================== */
+.hero-section {
+    padding: 160px 24px 100px 24px;
+    background: linear-gradient(rgba(27, 46, 30, 0.75), rgba(27, 46, 30, 0.85)), 
+                url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-tagline {
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 1px solid var(--light-green);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--light-green);
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   BOTÕES PERSONALIZADOS & ANIMAÇÕES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    font-size: 15px;
+    margin: 10px;
+}
+
+.btn-green {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-green:hover {
+    background-color: var(--light-green);
+    transform: translateY(-3px);
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+}
+
+.btn-gold:hover {
+    background-color: #fdd835;
+    transform: translateY(-3px);
+}
+
+.btn-full {
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+
+/* Efeitos Especiais (Glow e Pulse) */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(251, 192, 45, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(251, 192, 45, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(251, 192, 45, 0); }
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS & CARDS
+   ========================================================================== */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 24px;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: var(--dark-bg);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--text-light);
+}
+
+/* Grid de Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.icon-green { background-color: rgba(46, 125, 50, 0.1); color: var(--primary-green); }
+.icon-blue { background-color: rgba(2, 136, 209, 0.1); color: var(--tech-blue); }
+.icon-gold { background-color: rgba(251, 192, 45, 0.1); color: var(--gold); }
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--dark-bg);
+}
+
+.card p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Botões Internos dos Cards com Crescimento */
+.btn-card {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-green-card { background: rgba(46, 125, 50, 0.1); color: var(--primary-green); }
+.btn-green-card:hover { background: var(--primary-green); color: white; padding-right: 28px; }
+
+.btn-blue-card { background: rgba(2, 136, 209, 0.1); color: var(--tech-blue); }
+.btn-blue-card:hover { background: var(--tech-blue); color: white; padding-right: 28px; }
+
+.btn-gold-card { background: rgba(251, 192, 45, 0.1); color: var(--gold); }
+.btn-gold-card:hover { background: var(--gold); color: var(--dark-bg); padding-right: 28px; }
+
+
+/* ==========================================================================
+   SEÇÃO SUSTENTABILIDADE (FUNDO GRADIENTE VERDE)
+   ========================================================================== */
+.sustentabilidade-section {
+    background: linear-gradient(135deg, #2e7d32, #1b2e1e);
+    padding: 90px 24px;
+}
+
+.white-text h2 { color: var(--white) !important; }
+.white-text p { color: rgba(255,255,255,0.7) !important; }
+
+.row-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sust-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sust-card i {
+    font-size: 35px;
+    color: var(--light-green);
+    margin-right: 25px;
+}
+
+.sust-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--dark-bg);
+}
+
+.sust-card p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+
+/* ==========================================================================
+   SEÇÃO INTERATIVATIVA (QUIZ & CALCULADORA)
+   ========================================================================== */
+.interactive-bg {
+    background-color: #edf2ed;
+}
+
+.interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+@media(max-width: 600px) {
+    .interactive-grid { grid-template-columns: 1fr; }
+}
+
+.interactive-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box-header i {
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.box-header h2 {
+    font-size: 22px;
+}
+
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e6e0;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-green);
+}
+
+/* Opções do Quiz */
+.quiz-options {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-quiz {
+    padding: 14px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-quiz:hover {
+    transform: translateX(5px);
+}
+
+.btn-blue-quiz { background-color: rgba(2, 136, 209, 0.08); color: var(--tech-blue); }
+.btn-green-quiz { background-color: rgba(46, 125, 50, 0.08); color: var(--primary-green); }
+.btn-gold-quiz { background-color: rgba(251, 192, 45, 0.08); color: var(--gold); }
+
+/* Caixas de resposta dinâmica */
+.result-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.result-message i {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.success-box { background-color: #dcedc8; color: #33691e; border-left: 5px solid var(--primary-green); }
+.error-box { background-color: #ffcdd2; color: #b71c1c; border-left: 5px solid #b71c1c; }
+
+.animated-pop {
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ==========================================================================
+   PERGUNTA NORTEADORA (REFLEXÃO)
+   ========================================================================== */
+.reflection-section {
+    background-color: var(--white);
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.reflection-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reflection-icon {
+    font-size: 40px;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+}
+
+.reflection-content h3 {
+    font-size: 24px;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+}
+
+.reflection-content p {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+
+/* ==========================================================================
+   SEÇÃO CONTATO & RODAPÉ
+   ========================================================================== */
+.contact-section {
+    background-color: var(--dark-bg);
+    padding: 90px 24px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-form input, .contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #111e13;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sub-footer {
+    font-size: 13px;
+    margin-top: 8px;
+    opacity: 0.5;
+}
+
+
+/* ==========================================================================
+   DESIGN RESPONSIVO (MOBILE FIRST ADAPTATIONS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu a {
+        margin: 0 10px;
+    }
+    .hero-section {
+        padding-top: 200px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .section-header h2 {
+        font-size: 26px;
+    }
+}
