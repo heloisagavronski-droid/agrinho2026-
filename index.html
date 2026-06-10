@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Folha Curitiba • Agro Sustentável</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-leaf text-green"></i> Família Folha <span>Curitiba</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#inicio">Início</a>
+                <a href="#producao">Produção</a>
+                <a href="#sustentabilidade">Sustentabilidade</a>
+                <a href="#quiz">Quiz & Calculadora</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <span class="hero-tagline">Agro forte, futuro sustentável</span>
+            <h1>Equilíbrio entre produção e meio ambiente</h1>
+            <p>Descubra como a inovação e as tecnologias agrícolas modernas impulsionam o crescimento econômico preservando os recursos para as próximas gerações.</p>
+            <div class="hero-buttons">
+                <a href="#producao" class="btn btn-green btn-glow">Explorar Site <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#quiz" class="btn btn-gold btn-pulse">Fazer Quiz <i class="fa-solid fa-gamepad"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="producao" class="section-container">
+        <div class="section-header">
+            <h2>Produção Agrícola & Tecnologia</h2>
+            <p>O uso da inovação e tecnologia de ponta transformando o campo em um aliado da ecologia.</p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon icon-green">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </div>
+                <h3>Agricultura de Precisão</h3>
+                <p>Uso de GPS avançado, sensores inteligentes e monitoramento de dados em tempo real para otimizar a produção.</p>
+                <a href="#contato" class="btn-card btn-green-card">Saiba Mais <i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="card">
+                <div class="card-icon icon-blue">
+                    <i class="fa-solid fa-helicopter"></i>
+                </div>
+                <h3>Drones Agrícolas</h3>
+                <p>Monitoramento aéreo preciso, controle preventivo de pragas nas plantações e redução drástica de desperdícios.</p>
+                <a href="#contato" class="btn-card btn-blue-card">Ver Tecnologia <i class="fa-solid fa-satellite"></i></a>
+            </div>
+            <div class="card">
+                <div class="card-icon icon-gold">
+                    <i class="fa-solid fa-solar-panel"></i>
+                </div>
+                <h3>Energia Renovável</h3>
+                <p>Implementação de energia solar fotovoltaica no campo, gerando autossuficiência energética limpa e sem poluição.</p>
+                <a href="#contato" class="btn-card btn-gold-card">Conhecer <i class="fa-solid fa-sun"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="sustentabilidade-section">
+        <div class="section-header white-text">
+            <h2>Práticas de Sustentabilidade</h2>
+            <p>Ações eficientes e ecologicamente corretas aplicadas no dia a dia do agronegócio moderno.</p>
+        </div>
+
+        <div class="cards-grid row-layout">
+            <div class="sust-card">
+                <i class="fa-solid fa-seedling"></i>
+                <div>
+                    <h3>Conservação do Solo</h3>
+                    <p>Proteção ativa contra a erosão, rotação de culturas e preservação dos nutrientes naturais da terra.</p>
+                </div>
+            </div>
+            <div class="sust-card">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <h3>Irrigação Inteligente</h3>
+                    <p>Economia máxima de água através de sistemas automatizados que regam apenas o necessário no momento certo.</p>
+                </div>
+            </div>
+            <div class="sust-card">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                <div>
+                    <h3>Redução de Carbono</h3>
+                    <p>Uso direcionado de tecnologias verdes e biocombustíveis para neutralizar impactos ambientais no campo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section-container interactive-bg">
+        <div class="interactive-grid">
+            
+            <div class="interactive-box">
+                <div class="box-header">
+                    <i class="fa-solid fa-calculator text-green"></i>
+                    <h2>Calculadora Sustentável</h2>
+                </div>
+                <p>Insira abaixo quantos litros de água você ou sua propriedade economizam por dia para ver o impacto mensal acumulado!</p>
+                
+                <div class="form-group">
+                    <label for="litros">Litros economizados por dia:</label>
+                    <input type="number" id="litros" placeholder="Ex: 50" min="0">
+                </div>
+                <button class="btn btn-green btn-full" onclick="calcularEconomia()">Calcular Impacto</button>
+                
+                <div id="resultado-calc" class="result-message hide">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                    <span id="texto-calc"></span>
+                </div>
+            </div>
+
+            <div class="interactive-box">
+                <div class="box-header">
+                    <i class="fa-solid fa-lightbulb text-gold"></i>
+                    <h2>Quiz Educativo</h2>
+                </div>
+                <p class="question"><strong>Pergunta:</strong> Qual tecnologia ajuda diretamente no monitoramento inteligente e aéreo das plantações?</p>
+                
+                <div class="quiz-options">
+                    <button class="btn-quiz btn-blue-quiz" onclick="verificarQuiz(false, this)">Queimadas</button>
+                    <button class="btn-quiz btn-green-quiz" onclick="verificarQuiz(true, this)">Drones Agrícolas</button>
+                    <button class="btn-quiz btn-gold-quiz" onclick="verificarQuiz(false, this)">Desmatamento</button>
+                </div>
+                
+                <div id="resultado-quiz" class="result-message hide"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="reflection-section">
+        <div class="reflection-content">
+            <i class="fa-solid fa-earth-americas reflection-icon"></i>
+            <h3>Como o agronegócio pode crescer economicamente sem comprometer os recursos naturais das futuras gerações?</h3>
+            <p>"O crescimento sustentável e duradouro só é possível através da fusão contínua entre a alta tecnologia, a preservação rigorosa do ecossistema e a constante inovação prática no campo."</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="section-header white-text">
+            <h2>Fale Conosco</h2>
+            <p>Envie suas dúvidas, sugestões ou colabore com o projeto Família Folha.</p>
+        </div>
+        
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! 🌿'); this.reset();">
+            <div class="form-group">
+                <input type="text" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Sua Mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-green btn-full">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Família Folha Curitiba • Agro Sustentável 🌿</p>
+        <p class="sub-footer">Desenvolvido com foco no equilíbrio ambiental e futuro do campo.</p>
+    </footer>
+
+    <script>
+        // Função da Calculadora Sustentável
+        function calcularEconomia() {
+            const litrosInput = document.getElementById('litros').value;
+            const resultadoDiv = document.getElementById('resultado-calc');
+            const textoCalc = document.getElementById('texto-calc');
+
+            if(litrosInput && litrosInput >= 0) {
+                const economiaMensal = litrosInput * 30;
+                textoCalc.innerHTML = `Parabéns! Em um mês, você terá economizado <strong>${economiaMensal.toLocaleString('pt-BR')} litros</strong> de água limpa!`;
+                resultadoDiv.className = "result-message success-box animated-pop";
+            } else {
+                textoCalc.innerHTML = "Por favor, digite um valor válido de litros.";
+                resultadoDiv.className = "result-message error-box animated-pop";
+            }
+        }
+
+        // Função do Quiz Sustentável
+        function verificarQuiz(isCorrect, element) {
+            const resultadoDiv = document.getElementById('resultado-quiz');
+            
+            // Remove seleções anteriores de estilo de botões se houver
+            const botoes = document.querySelectorAll('.btn-quiz');
+            botoes.forEach(btn => btn.style.opacity = "0.6");
+            element.style.opacity = "1";
+
+            if(isCorrect) {
+                resultadoDiv.innerHTML = `<i class="fa-solid fa-circle-check"></i> <strong>Correto!</strong> Os Drones Agrícolas auxiliam mapeando a saúde das plantas e otimizando insumos.`;
+                resultadoDiv.className = "result-message success-box animated-pop";
+            } else {
+                resultadoDiv.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> <strong>Incorreto.</strong> Essa prática destrói o meio ambiente. Tente os Drones Agrícolas!`;
+                resultadoDiv.className = "result-message error-box animated-pop";
+            }
+        }
+    </script>
+</body>
+</html>
